@@ -22,7 +22,7 @@ namespace MSBuild.Umbraco.Tasks
         public string PackageLicenseName { get; set; }
         public string PackageLicenseUrl { get; set; }
 
-        public string MinimumRrequiredUmbracoVersion { get; set; }
+        public string MinimumRequiredUmbracoVersion { get; set; }
 
         public string AuthorName { get; set; }
         public string AuthorUrl { get; set; }
@@ -47,9 +47,9 @@ namespace MSBuild.Umbraco.Tasks
                 XmlHelper.UpdateAttribute(ref doc, Constants.PACKAGE_LICENSE_XPATH, "url", PackageLicenseUrl);
 
                 // Update requirements
-                if (!string.IsNullOrEmpty(MinimumRrequiredUmbracoVersion) && Regex.IsMatch(MinimumRrequiredUmbracoVersion, VERSION_NO_REGEX))
+                if (!string.IsNullOrEmpty(MinimumRequiredUmbracoVersion) && Regex.IsMatch(MinimumRequiredUmbracoVersion, VERSION_NO_REGEX))
                 {
-                    var match = Regex.Match(MinimumRrequiredUmbracoVersion, VERSION_NO_REGEX);
+                    var match = Regex.Match(MinimumRequiredUmbracoVersion, VERSION_NO_REGEX);
 
                     XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_REQUIREMENTS_XPATH + "/major", match.Groups[1].Value);
                     XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_REQUIREMENTS_XPATH + "/minor", match.Groups[2].Value);
