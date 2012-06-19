@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MSBuild.Umbraco.Tasks</id>
+    <version>0.0.0</version>
+    <title>MSBuild.Umbraco.Tasks</title>
+    <authors>Matt Brailsford</authors>
+    <owners>Matt Brailsford</owners>
+    <projectUrl>http://blog.mattbrailsford.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Installs a set of MSBuild tasks for automating Umbraco v4 package file creation</description>
+    <summary>Installs a set of MSBuild tasks for automating Umbraco v4 package file creation</summary>
+    <language />
+	<dependencies>
+	  <dependency id="SharpZipLib" version="0.84.0.0" />
+	</dependencies>
+  </metadata>
+  <files />
+</package>
