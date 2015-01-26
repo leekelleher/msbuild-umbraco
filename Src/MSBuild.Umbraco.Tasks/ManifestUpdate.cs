@@ -22,6 +22,8 @@ namespace MSBuild.Umbraco.Tasks
         public string PackageLicenseName { get; set; }
         public string PackageLicenseUrl { get; set; }
 
+        public string PackageUrl { get; set; }
+
         public string MinimumRequiredUmbracoVersion { get; set; }
 
         public string AuthorName { get; set; }
@@ -43,6 +45,7 @@ namespace MSBuild.Umbraco.Tasks
                 // Update package info
                 XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_NAME_XPATH, PackageName);
                 XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_VERSION_XPATH, PackageVersion);
+                XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_URL, PackageUrl);
                 XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_LICENSE_XPATH, PackageLicenseName);
                 XmlHelper.UpdateAttribute(ref doc, Constants.PACKAGE_LICENSE_XPATH, "url", PackageLicenseUrl);
 
