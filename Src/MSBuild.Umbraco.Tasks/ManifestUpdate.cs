@@ -28,7 +28,7 @@ namespace MSBuild.Umbraco.Tasks
 
         public string AuthorName { get; set; }
         public string AuthorUrl { get; set; }
-
+        public string IconUrl { get; set; }
         public string Readme { get; set; }
 
         public ITaskItem[] Files { get; set; }
@@ -62,6 +62,8 @@ namespace MSBuild.Umbraco.Tasks
                 // Update author info
                 XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_NAME_XPATH, AuthorName);
                 XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_URL_XPATH, AuthorUrl);
+                XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_ICON_URL, IconUrl);
+
 
                 // Update readme info
                 XmlHelper.UpdateCDataNode(ref doc, Constants.README_XPATH, Readme);
