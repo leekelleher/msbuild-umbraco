@@ -62,7 +62,7 @@ namespace MSBuild.Umbraco.Tasks
                 // Update author info
                 XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_NAME_XPATH, AuthorName);
                 XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_URL_XPATH, AuthorUrl);
-                XmlHelper.UpdateNode(ref doc, Constants.AUTHOR_ICON_URL, IconUrl);
+                XmlHelper.UpdateNode(ref doc, Constants.PACKAGE_ICON_URL, IconUrl);
 
 
                 // Update readme info
